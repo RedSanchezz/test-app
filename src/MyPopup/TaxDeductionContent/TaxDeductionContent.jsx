@@ -63,7 +63,8 @@ function TaxDeductionContent(props) {
         //убираем пробелы
         let salaryInt = salary.replace(' ', '');
         //если пустая строка - выводим ошибку
-        if(salaryInt===''){
+        //если введена слишком маленькая сумма - тоже ошибка
+        if(salaryInt==='' || salaryInt<1000){
             setError(true);
             setEarlyPayments([]);
             return;

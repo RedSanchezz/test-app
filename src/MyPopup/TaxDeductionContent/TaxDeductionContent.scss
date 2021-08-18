@@ -50,6 +50,7 @@
   line-height: 24px;
 
   .tax-deduction__content-salary-error {
+    margin-top: 5px;
     display: none;
     font-style: normal;
     font-weight: normal;
@@ -60,6 +61,7 @@
 
   &.error {
     .tax-deduction__content-salary-error {
+
       display: block;
     }
     input{
