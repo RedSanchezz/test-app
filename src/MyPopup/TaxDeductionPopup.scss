@@ -1,0 +1,44 @@
+.tax-deduction {
+
+
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100vw;
+  min-height: 100vh;
+
+
+  padding: 120px 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(0, 0, 0, 0.3);
+
+  font-family: LabGrotesque;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 500;
+  font-style: normal;
+
+  &.closed {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .tax-deduction {
+    padding: 0;
+    width: 100vw;
+    align-items: flex-start;
+    background-color: white;
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+
+}
+

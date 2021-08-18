@@ -1,24 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from 'react';
+import TaxDeductionPopup from './MyPopup/TaxDeductionPopup';
+import './App.scss';
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    let [isOpenPopup, setOpenPopup] = useState(false);
+
+    function openCloseButtonHandler() {
+        setOpenPopup(!isOpenPopup);
+    }
+    return (
+        <div className="App">
+            <button onClick={openCloseButtonHandler} className='tax-deduction__button' >Налоговый вычет</button>
+            <TaxDeductionPopup apartmentPrice={2000000}
+                     isOpen={isOpenPopup}
+                     closePopup={()=>setOpenPopup(false)}
+            />
+
+        </div>
   );
 }
 
